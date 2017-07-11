@@ -29,9 +29,7 @@ public class TopMoviesActivity extends AppCompatActivity {
     public void getMovie(View listItem) {
         Movie movie = (Movie) listItem.getTag();
         Log.d("Movie Title: ", movie.getTitle());
-        Intent intent = new Intent(this, FavouritesActivity.class);
-        intent.putExtra("movie", movie);
-        startActivity(intent);
+        Toast.makeText(this, "You clicked on " + movie.getTitle(), Toast.LENGTH_SHORT);
     }
 }
 
